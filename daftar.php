@@ -31,9 +31,9 @@ if(isset($_POST["register"])){
     footer {
       margin-bottom: 20px;
       margin-top: 20px;
-      background-color: #FFB6C1;
+      background-color: #8FBC8F;
       color: #B0C4DE;
-      padding: 20px;
+      padding: 10px;
        border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   }

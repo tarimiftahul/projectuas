@@ -50,9 +50,9 @@ if(isset($_POST['login'])){
       color: #777;
   }
     footer {
-      background-color: #FFB6C1;
+      background-color: #8FBC8F;
       color: #B0C4DE;
-      padding: 20px;
+      padding: 10px;
   }
   footer a {
       color: #800000;

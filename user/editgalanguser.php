@@ -24,9 +24,9 @@ include "../inc/koneksi.php";
       color: #777;
   }
     footer {
-      background-color: #FFB6C1;
+      background-color: #8FBC8F;
       color: #B0C4DE;
-      padding: 32px;
+      padding: 10px;
   }
   footer a {
       color: #800000;

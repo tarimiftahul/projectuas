@@ -23,9 +23,9 @@ $id= $_SESSION['id'];
       color: #777;
   }
     footer {
-      background-color: #FFB6C1;
+      background-color: #8FBC8F;
       color: #B0C4DE;
-      padding: 32px;
+      padding: 10px;
   }
   footer a {
       color: #800000;
@@ -63,113 +63,72 @@ $id= $_SESSION['id'];
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Edit Profil</title>
-<style type="text/css">
-body{
-  font-family:arial;
-  font-size: 14px;
-  background-color: white;
-}
-
-#utama{
-  width:300px;
-  margin: 0 auto;
-  margin-top: 12%;
-  background-color: #fff;
-}
-
-#judul{
-  padding: 15px;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  background-color: #336666;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-bottom: 3px solid #336666;
-}
-
-#inputan{
-  background-color: #ccc;
-  padding: 25px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-input,select,textarea{
-  padding: 10px;
-  border: 0;
-  width: 250px;
-}
-textarea{
-  font-family: arial;
-  font-size: 13px;
-}
-}
-.lg{
-  width: 240px;
-}
-
-.btn{
-  background-color: #336666;
-  border-radius: 10px;
-  color: #fff;
-}
-
-.btn:hover{
-  background-color: #336666;
-  cursor: pointer;
-}
-.btn-right{
-  padding: 85px;
-  text-decoration: none;
-  border-radius: 3px;
-  color: #000;
-  font-size: 16px;
-}
-
-</style>
-
 </head>
   <body>
 
-  <div id="utama" style="margin-top: 20px;">
-    <div id="judul">
-    Edit
-    </div>
+  <div class="page-header"><h3 align="center">Edit Profil</h3>
+      </div>
 
     <div id="inputan">
       <form action="" method="post">
       
-        <div>
-          <input type="text" name="username"  class="lg" value="<?php echo $data['username']; ?>" />
+        <div class="form-group">
+        <label for="username" class="control-label col-sm-3">Username</label>
+         <div class="col-sm-8">
+          <input type="text" name="username"  class="form-control" style="width: 750px; margin: 10px;" value="<?php echo $data['username']; ?>" />
         </div>
-        <div style="margin-top: 10px;">
-          <input type="password" name="password" class="lg" value="<?php echo $data['password']; ?>"/>
         </div>
-        <div style="margin-top: 10px;">
-          <input type="text" name="nama_lengkap" class="lg" value="<?php echo $data['nama_lengkap']; ?>"/>
+         <div class="form-group">
+        <label for="password" class="control-label col-sm-3">Password</label>
+         <div class="col-sm-8">
+          <input type="password" name="password" class="form-control" style="width: 750px; margin: 10px;" value="<?php echo $data['password']; ?>"/>
         </div>
-        <div style="margin-top: 10px;">
-          <select name="jenis_kelamin">
+        </div>
+        <div class="form-group">
+        <label for="nama_lengkap" class="control-label col-sm-3">Nama Lengkap</label>
+         <div class="col-sm-8">
+          <input type="text" name="nama_lengkap" class="form-control" style="width: 750px; margin: 10px;" value="<?php echo $data['nama_lengkap']; ?>"/>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="jenis_kelamin" class="control-label col-sm-3">Jenis Kelamin</label>
+         <div class="col-sm-8">
+          <select class="form-control" style="width: 750px; margin: 10px;" name="jenis_kelamin">
             <option value="">-Pilih Jenis Kelamin-</option>
             <option value="Laki-Laki">Laki-Laki</option>
             <option value="Perempuan">Perempuan</option>
           </select>
         </div>
-        <div style="margin-top: 10px;">
-        <input type="text" name="no_telepon"  class="lg" value="<?php echo $data['no_telepon']; ?>"/>
         </div>
-        <div style="margin-top: 10px;">
-        <input type="text" name="email"  class="lg" value="<?php echo $data['email']; ?>"/>
+        <div class="form-group">
+        <label for="no_telepon" class="control-label col-sm-3">No Telepon</label>
+         <div class="col-sm-8">
+        <input type="text" name="no_telepon"  class="form-control" style="width: 750px; margin: 10px;" value="<?php echo $data['no_telepon']; ?>"/>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="email" class="control-label col-sm-3">Email</label>
+         <div class="col-sm-8">
+        <input type="text" name="email"  class="form-control" style="width: 750px; margin: 10px;" value="<?php echo $data['email']; ?>"/>
+        </div>
         </div>
 
-        <div style="margin-top: 10px;">
-          <input name="alamat" class="lg"  value="<?php echo $data['alamat']; ?>">
+        <div class="form-group">
+        <label for="alamat" class="control-label col-sm-3">Alamat</label>
+         <div class="col-sm-8">
+          <input name="alamat" class="form-control" style="width: 750px; margin: 10px;"  value="<?php echo $data['alamat']; ?>">
         </div>
-        <div style="margin-top: 10px;">
-          <input type="submit" name="edit" value="Edit" class="btn"/>
-          <br>
-          <input type="button" name="batal" value="Batal" class="btn"/>
+        </div>
+        <div class="form-group">
+      <label for="btn" class="control-label col-sm-3"></label>
+      <div class="col-sm-8">
+        <div class="col-sm-4">
+          <input type="submit" name="edit"  value="Edit" class="btn btn-info btn-block"/>
+          </div>
+          <div class="col-sm-4">
+          <input type="reset" name="batal" value="Batal" class="btn btn-danger btn-block"/>
+        </div>
+        </div>
         </div>
       </form>
       </div>
