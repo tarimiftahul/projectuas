@@ -63,7 +63,7 @@ if(isset($_POST['login'])){
   }  
     </style>
 </head>
-<body>
+
     <div class="container">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -83,8 +83,12 @@ if(isset($_POST['login'])){
       </div>
     </nav>
     
-    
-
+ <body>   
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="top=content">
       <div class="inner-bg">
         <div class="container">

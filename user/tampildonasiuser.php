@@ -38,7 +38,7 @@ include "../inc/koneksi.php";
 		<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">KitaMampu</a>
+      <a class="navbar-brand" href="index.php">KitaMampu</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.php">H O M E</a></li>
@@ -66,30 +66,32 @@ include "../inc/koneksi.php";
 <fieldset>
 	<legend><strong>Tampil Data Donasi</strong></legend>
 	
-    <table width="100%" align="center" border="1px" style="border-collapse=collapse;">
-    	<tr style="background-color: #336666;">
-            <th>Jumlah</th>
-            <th>Comment</th>
-            <th>Tanggal</th>
-            <th>Bank</th>
-            <th>No. Rek</th>
-            <th>Status</th>
-            <th>Status</th>
+    <div class="row" >
+    <div class="col-md-12 col-xs-12">
+      <table class="table table-bordered table-striped table-hover" >
+      <thead style="background-color: #66CCFF;"> 
+            <th style="text-align: center;">Jumlah</th>
+            <th style="text-align: center;">Comment</th>
+            <th style="text-align: center;">Tanggal</th>
+            <th style="text-align: center;">Bank</th>
+            <th style="text-align: center;">No. Rek</th>
+            <th style="text-align: center;">Status</th>
+            <th style="text-align: center;">Detail</th>
 
-        </tr>
+        </thead>
 
         <?php 
         $sql = mysql_query("select a.*,b.no_rek from tb_donasi a join tb_rekening b on a.bank=b.bank where id_user = '$_SESSION[id]'") or die (mysql_error());
         while ($data = mysql_fetch_array($sql)){
         	?>
 			<tr>
-				<td><?php echo $data['jumlah']; ?></td>
-				<td><?php echo $data['comment']; ?></td>
-				<td><?php echo $data['tanggal']; ?></td>
-				<td><?php echo $data['bank']; ?></td>
-        <td><?php echo $data['no_rek']; ?></td>
-				<td><?php echo $data['status']; ?></td>
-        <td><?php if ($data['status']=='pending'){ 
+				<td align="center"><?php echo $data['jumlah']; ?></td>
+				<td align="center"><?php echo $data['comment']; ?></td>
+				<td align="center"><?php echo $data['tanggal']; ?></td>
+				<td align="center"><?php echo $data['bank']; ?></td>
+        <td align="center"><?php echo $data['no_rek']; ?></td>
+				<td align="center"><?php echo $data['status']; ?></td>
+        <td align="center"><?php if ($data['status']=='pending'){ 
         echo '<a href="konfirmasi.php?id='.$data['id_donasi'].'">Konfirmasi</a>';
          } ?></td>
 
@@ -98,6 +100,9 @@ include "../inc/koneksi.php";
 			}
 		?>
     </table>
+    </div>
+    </div>
+
 </fieldset>
 
       <div id="contact" class="container">

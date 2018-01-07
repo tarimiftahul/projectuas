@@ -10,7 +10,7 @@
     
     <table width="100%" align="center" border="1px" style="border-collapse=collapse;">
     	<tr style="background-color: #336666;">
-        	<th>Kode User</th>
+        	<th>Id User</th>
             <th>Username</th>
             <th>Nama Lengkap</th>
             <th>Jenis Kelamin</th>
@@ -22,10 +22,10 @@
 
         <?php
 		$inputan_pencarian = @$_POST['inputan_pencarian'];
-		$cari_galang = @$_POST['cari_galang'];
-		if($cari_galang){
+		$cari_user= @$_POST['cari_user'];
+		if($cari_user){
 			if($inputan_pencarian != ""){
-				$sql = mysql_query("select * from tb_user where kode like '%%$inputan_pencarian%%'") or die (mysql_error());
+				$sql = mysql_query("select * from tb_user where id_user like '%%$inputan_pencarian%%'") or die (mysql_error());
 			} else {
 				$sql = mysql_query("select * from tb_user") or die (mysql_error());
 			}
@@ -45,7 +45,7 @@
 			while($data = mysql_fetch_array($sql)){
 			?>
 			<tr>
-				<td><?php echo $data['kode']; ?></td>
+				<td><?php echo $data['id_user']; ?></td>
 				<td><?php echo $data['username']; ?></td>
 				<td><?php echo $data['nama_lengkap']; ?></td>
 				<td><?php echo $data['jenis_kelamin']; ?></td>
@@ -54,8 +54,8 @@
 				<td><?php echo $data['alamat']; ?></td>
 
 				<td align="center">
-					<a href="?page=userdiadmin&action=edit&kode=<?php echo $data['kode'];?>"><button>Edit</button></a>
-					<a onclick="return confirm('Yakin Ingin Menghapus Data?')" href="?page=userdiadmin&action=hapus&kode=<?php echo $data['kode'];?>"><button>Hapus</button></a>
+					<a href="?page=userdiadmin&action=edit&id_user=<?php echo $data['id_user'];?>"><button>Edit</button></a>
+					<a onclick="return confirm('Yakin Ingin Menghapus Data?')" href="?page=userdiadmin&action=hapus&id_user=<?php echo $data['id_user'];?>"><button>Hapus</button></a>
 				</td>
 			</tr>
 			<?php

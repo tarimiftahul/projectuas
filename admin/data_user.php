@@ -14,7 +14,7 @@
 		<div class="col-md-12 col-xs-12">
 			<table class="table table-bordered table-striped table-hover" >
 			<thead style="background-color: #336666;"> 
-					<th style="text-align: center;">Kode User</th>
+					<th style="text-align: center;">Id User</th>
 		            <th style="text-align: center;">Username</th>
 		            <th style="text-align: center;">Nama Lengkap</th>
 		            <th style="text-align: center;">Jenis Kelamin</th>
@@ -75,8 +75,7 @@
 						<td align="center"><?php echo $data['alamat']; ?></td>
 						
 						<td align="center">
-							<a href="?page=userdiadmin&action=edit&kode=<?php echo $data['kode']; ?>"><a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
-							<a onclick="return confirm('Yakin ingin menghapus data ?')" href="?page=userdiadmin&action=hapus&kode=<?php echo $data['kode']; ?>"><a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></a>
+							<a onclick="return confirm('Yakin ingin menghapus data ?')" href="?page=userdiadmin&action=hapus&iduser=<?php echo $data['id_user']; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></a>
 							
 						</td>
 					</tr>
@@ -90,7 +89,12 @@
 				<?php 
 				$jml = mysql_num_rows(mysql_query("select * from tb_user"));
 				echo "Jumlah Data : <b>".$jml."</b>"; ?>
-			</div>	
+			</div>
+
+
+			<br>
+			<br>
+			<a href="../laporan/cetakuser.php" target="_blank"><button>Cetak</button></a>	
 		</div>
       </div>
     </div> 

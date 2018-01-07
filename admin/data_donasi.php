@@ -90,6 +90,11 @@
 				$jml = mysql_num_rows(mysql_query("select * from tb_donasi"));
 				echo "Jumlah Data : <b>".$jml."</b>"; ?>
 			</div>	
+
+			<br>
+			<br>
+			<a href="../laporan/cetakdonasi.php" target="_blank"><button>Cetak</button></a>
+
 		</div>
       </div>
     </div> 

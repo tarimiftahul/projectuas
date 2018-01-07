@@ -20,7 +20,6 @@
 		            <th style="text-align: center;">Lokasi</th>
 		            <th style="text-align: center;">Target</th>
 		            <th style="text-align: center;">Deadline</th>
-		            
 		            <th style="text-align: center;">Opsi</th>
 			</thead>
 			<tbody>
@@ -72,6 +71,7 @@
 						<td align="center"><?php echo $data['lokasi']; ?></td>
 						<td align="center"><?php echo $data['target']; ?></td>
 						<td align="center"><?php echo $data['deadline']; ?></td>
+					
 						
 						<td align="center">
 							<a href="?page=galangadmin&action=edit&idgalang=<?php echo $data['id_galang']; ?>"  class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
@@ -92,7 +92,9 @@
 
 			<br>
 			<br>
-			<a href="laporan/cetak.php" target="blank"><button>Cetak</button></a>
+			<a href="../laporan/cetakgalang.php" target="_blank"><button>Cetak</button></a>
+
+			
 		</div>
       </div>
     </div> 

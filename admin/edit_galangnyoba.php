@@ -28,20 +28,6 @@ include "../inc/koneksi.php";
   			</div>	
   		</div>
 
-      <div class="form-group">
-        <label for="deskripsi" class="control-label col-sm-3">Deskripsi</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" rows="3" name="deskripsi" id="deskripsi" value="<?php echo $data['deskripsi'] ?>">
-        </div>  
-      </div>
-
-      <div class="form-group">
-        <label for="cerita" class="control-label col-sm-3">Cerita</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" rows="3" name="cerita" id="cerita" value="<?php echo $data['cerita'] ?>">
-        </div>  
-      </div>
-
 
   		<div class="form-group">
   			<label for="kategori" class="control-label col-sm-3">Kategori</label>
@@ -49,7 +35,7 @@ include "../inc/koneksi.php";
   				<select class="form-control" name="kategori" id="kategori">
   					<option value="">--Pilih Kategori--</option>
   					<option value="Bencana Alam">Bencana Alam</option>
-  					<option value="Anak Sakit">Anak Sakit</option>
+  					<option value="Anak Yatim">Anak Yatim</option>
             <option value="Sosial">Sosial</option>
   				</select>
   			</div>	
@@ -82,7 +68,6 @@ include "../inc/koneksi.php";
         </div>  
       </div>
 
-     
  		<div class="form-group">
  			<label for="btn" class="control-label col-sm-3"></label>
 	 		<div class="col-sm-8">
@@ -112,14 +97,14 @@ include "../inc/koneksi.php";
   
    $edit_galang = @$_POST['edit'];
    if($edit_galang){
-     if($status == ""){ 
+     if($judul == "" || $kategori == "" || $lokasi == "" || $target == "" || $deadline == ""){ 
        ?>
              <script type="text/javascript">
        alert("Inputan tidak boleh ada yang kosong");
        </script>
              <?php
      } else {
-       mysql_query("update tb_galang set status = '$status' where id_galang = '$idgalang'") or die (mysql_error());
+       mysql_query("update tb_galang set judul = '$judul', kategori = '$kategori', lokasi = '$lokasi', target = '$target', deadline = '$deadline' where id_galang = '$idgalang'") or die (mysql_error());
        ?>
              <script type="text/javascript">
        alert("Data Berhasil Diedit");

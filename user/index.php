@@ -111,13 +111,15 @@ include "../inc/koneksi.php";
       $gl = mysql_fetch_array(mysql_query("select a.username from tb_user a join tb_galang b on a.id_user=b.id_user where id_galang=$id_galang"));
 
       $persen = $jumlah['jml']/$data['target']*100;
-
+      $awal = date_create();
+      $akhir = date_create($data['deadline']);
+      $diff = date_diff($awal, $akhir);
 
     ?>
     <div class="col-sm-4">
         <div class="panel panel-default">
           <div class="panel-heading" style="padding:0px">
-              <img width="360px" height="250px" src="../images/<?php echo $data['foto']; ?>">
+              <img width="358px" height="250px" src="../images/<?php echo $data['foto']; ?>">
           </div>
           <div class="panel-body"> 
               <b><font size="3px" style="margin-top:20px" text-align="justify"><?php echo $data['judul']; ?></font></b>
@@ -129,11 +131,11 @@ include "../inc/koneksi.php";
                   <p>Terkumpul</p>
                 </div>
                 <div class="col-sm-4">
-                  <h5><?php echo $persen.'%';?></h5>
+                  <h5><?php echo number_format($persen,2).'%';?></h5>
                   <p>Tercapai</p>
                 </div>
                 <div class="col-sm-4">
-                  <h5>12</h5>
+                  <h5><?php echo $diff->d ?></h5>
                   <p>Hari lagi</p>
                 </div>
               </div>
@@ -166,7 +168,6 @@ include "../inc/koneksi.php";
 
   <div class="row">
     <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>Bandung, INA</p>
       <p><span class="glyphicon glyphicon-phone"></span>Phone: 021 912 315</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: kitamampu@gmail.com</p>

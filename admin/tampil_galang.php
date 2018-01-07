@@ -16,6 +16,7 @@
             <th>Lokasi</th>
             <th>Target</th>
             <th>Deadline</th>
+            <th>Status</th>
             <th>Opsi</th>
         </tr>
 
@@ -50,6 +51,7 @@
 				<td><?php echo $data['lokasi']; ?></td>
 				<td><?php echo $data['target']; ?></td>
 				<td><?php echo $data['deadline']; ?></td>
+				<td><?php echo $data['status']; ?></td>
 
 				<td align="center">
 					<a href="?page=galangadmin&action=edit&idgalang=<?php echo $data['id_galang'];?>"><button>Edit</button></a>
