@@ -3,7 +3,7 @@ mysql_connect("localhost", "root", "") or die (mysql_error());
 mysql_select_db("paw") or die (mysql_error());
 
 
-class test extends PHPUnit_Framework_TestCase{
+class testuser extends PHPUnit_Framework_TestCase{
 	function testalamat(){
 		$sql = mysql_query("SELECT * FROM tb_user where username ='TariJannah'");
 		$user = mysql_fetch_array($sql);
