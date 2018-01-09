@@ -5,13 +5,13 @@ php:
   - 5.6
 
 env:
-  - testuser.php
+  - testnot.php
  
 before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
  
-script: phpunit testuser.php
+script: phpunit testnot.php
 
 matrix:
   allow_failures:
