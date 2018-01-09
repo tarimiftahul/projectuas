@@ -35,7 +35,7 @@ include "../inc/koneksi.php";
   				<select class="form-control" name="kategori" id="kategori">
   					<option value="">--Pilih Kategori--</option>
   					<option value="Bencana Alam">Bencana Alam</option>
-  					<option value="Anak Yatim">Anak Yatim</option>
+  					<option value="Anak Sakit">Anak Sakit</option>
             <option value="Sosial">Sosial</option>
   				</select>
   			</div>	
@@ -46,10 +46,11 @@ include "../inc/koneksi.php";
         <div class="col-sm-8">
           <select class="form-control" name="lokasi" id="lokasi">
             <option value="">--Pilih Lokasi--</option>
-            <option value="aceh">Aceh</option>
-            <option value="jakarta">Jakarta</option>
-            <option value="bandung">Bandung</option>
-            <option value="medan">Medan</option>
+            <option value="Sumatera">Sumatera</option>
+            <option value="Kalimantan">Kalimantan</option>
+            <option value="Jawa">Jawa</option>
+            <option value="Sulawesi">Sulawesi</option>
+            <option value="Papua">Papua</option>
           </select>
         </div>  
       </div>

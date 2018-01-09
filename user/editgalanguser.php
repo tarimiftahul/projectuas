@@ -2,8 +2,8 @@
 @session_start();
 include "../inc/koneksi.php";
 
-  $idgalanguser = @$_GET['id_galang'];
-  $sql = mysql_query("select * from tb_galang where id_galang = '$idgalanguser' ") or die (mysql_error());
+  $idgalang = @$_GET['id_galang'];
+  $sql = mysql_query("select * from tb_galang where id_galang = '$idgalang' ") or die (mysql_error());
   $data = mysql_fetch_array($sql);
 
 ?>
@@ -47,13 +47,13 @@ include "../inc/koneksi.php";
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.php">H O M E</a></li>
       <li class="active"><a href="galang.php">GALANG DANA</a></li>
-      <li><a href="#">ABOUT</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['uname']; ?><span class="caret"></span></a>
       <ul class="dropdown-menu">
          <li><a href="tampildonasiuser.php">Donasi Saya</a></li>
          <li><a href="tampilgalanguser.php">Galang Dana Saya</a></li>
+          <li><a href="profil.php">Profil</a></li>
          <li><a href="edituser.php">Edit Profil</a></li>
       </ul>
       </li>
@@ -94,10 +94,11 @@ include "../inc/koneksi.php";
         <div class="col-sm-8">
           <select class="form-control" name="lokasi" id="lokasi">
             <option value="">--Pilih Lokasi--</option>
-            <option value="aceh">Aceh</option>
-            <option value="jakarta">Jakarta</option>
-            <option value="bandung">Bandung</option>
-            <option value="medan">Medan</option>
+            <option value="Sumatera">Sumatera</option>
+            <option value="Kalimantan">Kalimantan</option>
+            <option value="Jawa">Jawa</option>
+            <option value="Sulawesi">Sulawesi</option>
+            <option value="Papua">Papua</option>
           </select>
         </div>  
       </div>
@@ -137,7 +138,7 @@ include "../inc/koneksi.php";
 
 
 <?php
-   $idgalanguser = @$_POST['id_galang'];
+   $id_galang = @$_POST['id_galang'];
    $judul = @$_POST['judul'];
    $kategori = @$_POST['kategori'];
    $lokasi = @$_POST['lokasi'];
@@ -153,7 +154,7 @@ include "../inc/koneksi.php";
        </script>
              <?php
      } else {
-       mysql_query("update tb_galang set judul = '$judul', kategori = '$kategori', lokasi = '$lokasi', target = '$target', deadline = '$deadline' where id_galang = '$idgalanguser'") or die (mysql_error());
+       mysql_query("update tb_galang set judul = '$judul', kategori = '$kategori', lokasi = '$lokasi', target = '$target', deadline = '$deadline' where id_galang = '$idgalang'") or die (mysql_error());
        ?>
              <script type="text/javascript">
        alert("Data Berhasil Diedit");

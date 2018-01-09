@@ -115,6 +115,10 @@ if(isset($_POST['login'])){
               </div>
               
               <button type="submit" name="login" value="login" class="btn btn-info">Sign In</button>
+
+              <br>
+               <br>
+              <p>Belum Daftar?<a href="daftar.php">Daftar disini</a></p>
             </form>
           </div>
           </div>  

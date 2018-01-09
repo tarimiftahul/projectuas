@@ -114,13 +114,13 @@ if(isset($_POST["donasi"])){
     <ul class="nav navbar-nav">
       <li><a href="index.php">HOME</a></li>
       <li><a href="galang.php">GALANG DANA</a></li>
-      <li><a href="#">ABOUT</a></li>
     </ul>
          <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['uname']; ?><span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a href="tampildonasiuser.php">Donasi Saya</a></li>
         <li><a href="tampilgalanguser.php">Galang Dana Saya</a></li>
+         <li><a href="profil.php">Profil</a></li>
         <li><a href="edituser.php">Edit Profil</a></li>
       </ul>
       </li>

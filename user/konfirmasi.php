@@ -80,6 +80,7 @@
            <ul class="dropdown-menu">
              <li><a href="tampildonasiuser.php">Donasi Saya</a></li>
             <li><a href="tampilgalanguser.php">Galang Dana Saya</a></li>
+             <li><a href="profil.php">Profil</a></li>
             <li><a href="edituser.php">Edit Profil</a></li>
           </ul>
           </li>
@@ -99,7 +100,7 @@
             <div class="form-group">
               <label for="jumlah" class="control-label col-sm-3">Nominal Donasi</label>
               <div class="col-sm-8">
-              <input type="text" name="jumlah" placeholder="Masukkan Nominal Donasi" class="form-control" style="width: 750px; margin: 10px;" />
+              <input type="text" name="jumlah" placeholder="Masukkan Nominal Donasi (diisi sama dengan Nominal transfer)" class="form-control" style="width: 750px; margin: 10px;" />
               </div>
             </div>
             <div class="form-group">

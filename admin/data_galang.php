@@ -90,10 +90,6 @@
 				echo "Jumlah Data : <b>".$jml."</b>"; ?>
 			</div>	
 
-			<br>
-			<br>
-			<a href="../laporan/cetakgalang.php" target="_blank"><button>Cetak</button></a>
-
 			
 		</div>
       </div>

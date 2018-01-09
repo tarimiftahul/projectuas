@@ -3,13 +3,13 @@ mysql_connect("localhost", "root", "") or die (mysql_error());
 mysql_select_db("paw") or die (mysql_error());
 
 
-class testuser extends PHPUnit_Framework_TestCase{
+class testnot extends PHPUnit_Framework_TestCase{
 	function testalamat(){
 		$sql = mysql_query("SELECT * FROM tb_user where username ='TariJannah'");
 		$user = mysql_fetch_array($sql);
 		$test_user = $user['alamat'];
 		$content = $test_user;
-		$this->asserNotEquals('bekasi',$content);
+		$this->assertNotEquals('bekasi1',$content);
 	}
 	
 	function testUsername(){

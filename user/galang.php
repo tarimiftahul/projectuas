@@ -84,6 +84,7 @@ if(isset($_POST["galang"])){
       <ul class="dropdown-menu">
         <li><a href="tampildonasiuser.php">Donasi Saya</a></li>
         <li><a href="tampilgalanguser.php">Galang Dana Saya</a></li>
+         <li><a href="profil.php">Profil</a></li>
         <li><a href="edituser.php">Edit Profil</a></li>
       </ul>
       </li>
@@ -138,10 +139,11 @@ if(isset($_POST["galang"])){
         <div class="col-sm-8">
           <select class="form-control" name="lokasi" style="width: 750px; margin: 10px;">
             <option value="">-Pilih Lokasi-</option>
-            <option value="aceh">Aceh</option>
-            <option value="jakarta">Jakarta</option>
-            <option value="bandung">Bandung</option>
-            <option value="medan">Medan</option>
+            <option value="Sumatera">Sumatera</option>
+            <option value="Kalimantan">Kalimantan</option>
+            <option value="Jawa">Jawa</option>
+            <option value="Sulawesi">Sulawesi</option>
+            <option value="Papua">Papua</option>
           </select>
           </div>
           </div>

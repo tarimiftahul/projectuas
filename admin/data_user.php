@@ -91,11 +91,10 @@
 				echo "Jumlah Data : <b>".$jml."</b>"; ?>
 			</div>
 
-
-			<br>
-			<br>
-			<a href="../laporan/cetakuser.php" target="_blank"><button>Cetak</button></a>	
+	
 		</div>
+
+		<a href="../laporan/cetakuser.php" target="_blank" class="btn btn-success"><span class="glyphicon glyphicon-print"></span>Cetak</a>
       </div>
     </div> 
 </div>

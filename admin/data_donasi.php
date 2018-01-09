@@ -21,7 +21,7 @@
 		            <th style="text-align: center;">Tanggal</th>
 		            <th style="text-align: center;">Comment</th>
 		            <th style="text-align: center;">Metode Pembayaran</th>
-		            <th style="text-align: center;">Opsi</th>
+		            
 			</thead>
 			<tbody>
 				<?php
@@ -74,10 +74,7 @@
 						<td align="center"><?php echo $data['comment']; ?></td>
 						<td align="center"><?php echo $data['bank']; ?></td>
 						
-						<td align="center">
-							<a href="?page=donasiadmin&action=edit&iddonasi=<?php echo $data['id_donasi']; ?>" class="                   btn btn-danger btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
-							
-						</td>
+						
 					</tr>
 				<?php
 				}
@@ -90,10 +87,6 @@
 				$jml = mysql_num_rows(mysql_query("select * from tb_donasi"));
 				echo "Jumlah Data : <b>".$jml."</b>"; ?>
 			</div>	
-
-			<br>
-			<br>
-			<a href="../laporan/cetakdonasi.php" target="_blank"><button>Cetak</button></a>
 
 		</div>
       </div>

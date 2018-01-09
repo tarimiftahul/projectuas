@@ -44,7 +44,7 @@ include "../inc/koneksi.php";
       <a class="navbar-brand" href="indexadmin.php">KitaMampu</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="indexadmin.php"><span class="glyphicon glyphicon-home"></span>      HOME</a></li>
+      <li><a href="?page=home"><span class="glyphicon glyphicon-home"></span>      HOME</a></li>
       <li><a href="?page=galangadmin"><span class="glyphicon glyphicon-th-list"></span>      GALANG DANA</a></li>
       <li><a href="?page=donasiadmin"><span class="glyphicon glyphicon-th-list"></span>      DONASI</a></li>
       <li><a href="?page=userdiadmin"><span class="glyphicon glyphicon-th-list"></span>      DATA USER</a></li>
@@ -101,7 +101,7 @@ include "../inc/koneksi.php";
 
   }else if($page == "laporanuser"){
     if($action == ""){
-    include "laporan_user.php";
+    include "data_user.php";
   }
 
   }else if($page == "profiladmin"){
@@ -109,8 +109,8 @@ include "../inc/koneksi.php";
     include "editadmin.php";
   }
   
-  } else if($page == ""){
-    echo "Selamat datang di halaman utama";
+  } else if($page == "home"){
+    include "home.php";
   } else {
     echo "404! Halaman Tidak ditemukan";
   }
